@@ -1,0 +1,45 @@
+.spinner {
+	width: 30px;
+  height: 30px;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:100%;
+  background: rgb(209, 209, 209);
+  transform-origin: 100% 0;
+  animation-name: rotate;
+  animation: rotate 1s ease-in-out 0.5s infinite;
+  transform: translateY(42px);
+}
+
+/* I'd set mixin here if I used Sass */
+
+.spinner2 {
+  transform: translateY(42px);
+	width: 30px;
+  height: 30px;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:100%;
+  background: rgb(209, 209, 209);
+  transform-origin: 100% 0;
+  animation-name: rotate;
+  animation: rotate 1s ease-in-out infinite;
+}
+
+.loading {
+  padding-top: 50px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateY(42px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(42px) rotateZ(180deg);
+  }
+  100% {
+    transform: translateY(42px) rotateZ(360deg);
+  }
+}
